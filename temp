@@ -1,0 +1,117 @@
+Task 1
+ {B1:1:1} ,  {R:1:1} , 
+=====> {B1:2:1} , 
+solution found
+Level 0 : PushThrough(B1,1,2) , 
+Task 2
+ {B1:2:1} ,  {R:1:1} , 
+=====> {B1:2:1} , 
+solution found
+Level 0 : Pers(B1:2:1) , 
+Task 3
+ {B1:1:1} ,  {R:2:1} , 
+=====> {B1:2:1} , 
+solution found
+Level 0 : GoThrough(2,1) , Pers(B1:1:1) , 
+Level 1 : PushThrough(B1,1,2) , 
+Task 4
+ {B1:2:1} ,  {R:2:1} , 
+=====> {B1:2:1} , 
+solution found
+Level 0 : Pers(B1:2:1) , 
+Task 5
+ {B1:1:1} ,  {B2:1:1} ,  {R:1:1} , 
+=====> {B1:3:1} ,  {B2:3:1} , 
+solution found
+Level 0 : Pers(B2:1:1) , PushThrough(B1,1,2) , 
+Level 1 : GoThrough(2,1) , Pers(B1:2:1) , Pers(B2:1:1) , 
+Level 2 : Pers(B1:2:1) , PushThrough(B2,1,2) , 
+Level 3 : Pers(B2:2:1) , PushThrough(B1,2,3) , 
+Level 4 : GoThrough(3,2) , Pers(B1:3:1) , Pers(B2:2:1) , 
+Level 5 : Pers(B1:3:1) , PushThrough(B2,2,3) , 
+Task 6
+ {B1:1:1} ,  {B2:2:1} ,  {R:2:1} , 
+=====> {B1:3:1} ,  {B2:3:1} , 
+solution found
+Level 0 : GoThrough(2,1) , Pers(B1:1:1) , Pers(B2:2:1) , 
+Level 1 : Pers(B2:2:1) , PushThrough(B1,1,2) , 
+Level 2 : Pers(B2:2:1) , PushThrough(B1,2,3) , 
+Level 3 : GoThrough(3,2) , Pers(B1:3:1) , Pers(B2:2:1) , 
+Level 4 : Pers(B1:3:1) , PushThrough(B2,2,3) , 
+Task 7
+ {B1:1:1} ,  {B2:1:1} ,  {R:2:1} , 
+=====> {B1:3:1} ,  {B2:3:1} , 
+solution found
+Level 0 : GoThrough(2,1) , Pers(B1:1:1) , Pers(B2:1:1) , 
+Level 1 : Pers(B2:1:1) , PushThrough(B1,1,2) , 
+Level 2 : GoThrough(2,1) , Pers(B1:2:1) , Pers(B2:1:1) , 
+Level 3 : Pers(B1:2:1) , PushThrough(B2,1,2) , 
+Level 4 : Pers(B2:2:1) , PushThrough(B1,2,3) , 
+Level 5 : GoThrough(3,2) , Pers(B1:3:1) , Pers(B2:2:1) , 
+Level 6 : Pers(B1:3:1) , PushThrough(B2,2,3) , 
+Task 8
+ {B1:1:1} ,  {B2:2:1} ,  {R:1:1} , 
+=====> {B1:3:1} ,  {B2:3:1} , 
+solution found
+Level 0 : Pers(B2:2:1) , PushThrough(B1,1,2) , 
+Level 1 : Pers(B2:2:1) , PushThrough(B1,2,3) , 
+Level 2 : GoThrough(3,2) , Pers(B1:3:1) , Pers(B2:2:1) , 
+Level 3 : Pers(B1:3:1) , PushThrough(B2,2,3) , 
+Task 9
+ {B1:1:1} ,  {B2:2:1} ,  {R:3:1} , 
+=====> {B1:3:1} ,  {B2:3:1} , 
+solution found
+Level 0 : GoThrough(3,2) , Pers(B1:1:1) , Pers(B2:2:1) , 
+Level 1 : GoThrough(2,1) , Pers(B1:1:1) , Pers(B2:2:1) , 
+Level 2 : Pers(B2:2:1) , PushThrough(B1,1,2) , 
+Level 3 : Pers(B2:2:1) , PushThrough(B1,2,3) , 
+Level 4 : GoThrough(3,2) , Pers(B1:3:1) , Pers(B2:2:1) , 
+Level 5 : Pers(B1:3:1) , PushThrough(B2,2,3) , 
+Task 10
+ {B1:3:1} ,  {B2:3:1} ,  {R:3:1} , 
+=====> {B1:3:1} ,  {B2:3:1} , 
+solution found
+Level 0 : Pers(B1:3:1) , Pers(B2:3:1) , 
+Task 11
+ {B1:3:1} ,  {B2:3:1} ,  {R:2:1} , 
+=====> {B1:3:1} ,  {B2:3:1} , 
+solution found
+Level 0 : Pers(B1:3:1) , Pers(B2:3:1) , 
+Task 12
+ {B1:3:1} ,  {B2:1:1} ,  {R:2:1} , 
+=====> {B1:3:1} ,  {B2:3:1} , 
+solution found
+Level 0 : GoThrough(2,1) , Pers(B1:3:1) , Pers(B2:1:1) , 
+Level 1 : Pers(B1:3:1) , PushThrough(B2,1,2) , 
+Level 2 : Pers(B1:3:1) , PushThrough(B2,2,3) , 
+Task 13
+ {B1:3:1} ,  {B2:1:1} ,  {R:3:1} , 
+=====> {B1:3:1} ,  {B2:3:1} , 
+solution found
+Level 0 : GoThrough(3,2) , Pers(B1:3:1) , Pers(B2:1:1) , 
+Level 1 : GoThrough(2,1) , Pers(B1:3:1) , Pers(B2:1:1) , 
+Level 2 : Pers(B1:3:1) , PushThrough(B2,1,2) , 
+Level 3 : Pers(B1:3:1) , PushThrough(B2,2,3) , 
+Task 14
+ {B1:3:1} ,  {B2:1:1} ,  {R:1:1} , 
+=====> {B1:3:1} ,  {B2:3:1} , 
+solution found
+Level 0 : Pers(B1:3:1) , PushThrough(B2,1,2) , 
+Level 1 : Pers(B1:3:1) , PushThrough(B2,2,3) , 
+Task 15
+ {B1:2:1} ,  {B2:3:1} ,  {B3:3:1} ,  {R:2:1} , 
+=====> {B1:4:1} ,  {B2:4:1} ,  {B3:4:1} , 
+solution found
+Level 0 : Pers(B2:3:1) , Pers(B3:3:1) , PushThrough(B1,2,3) , 
+Level 1 : Pers(B2:3:1) , Pers(B3:3:1) , PushThrough(B1,3,4) , 
+Level 2 : GoThrough(4,3) , Pers(B1:4:1) , Pers(B2:3:1) , Pers(B3:3:1) , 
+Level 3 : Pers(B1:4:1) , Pers(B3:3:1) , PushThrough(B2,3,4) , 
+Level 4 : GoThrough(4,3) , Pers(B1:4:1) , Pers(B2:4:1) , Pers(B3:3:1) , 
+Level 5 : Pers(B1:4:1) , Pers(B2:4:1) , PushThrough(B3,3,4) , 
+Task 16
+ {B1:3:1} ,  {B2:2:1} ,  {B3:4:1} ,  {R:2:1} , 
+=====> {B1:4:1} ,  {B2:4:1} ,  {B3:4:1} , 
+solution found
+Level 0 : Pers(B1:3:1) , Pers(B3:4:1) , PushThrough(B2,2,3) , 
+Level 1 : Pers(B2:3:1) , Pers(B3:4:1) , PushThrough(B1,3,4) , 
+Level 2 : GoThrough(4,3) , Per

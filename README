@@ -1,0 +1,70 @@
+tasks.txt :
+Each task in this file is mentioned as a set of states like : {B1:1,B2:2,R:2}
+(a set of 3 states) 
+1. B1 is in room1, 
+2. B2 is in room2 , 
+3. Robot is in room2
+
+The task is to move the all boxes to the highest numbered room (in the figure in the assignment, this would be the room on the far right side).  For each task the problem _size is the number of rooms mentioned in the task + 1.
+
+For a problem_size of s, the number of rooms will be s and number of boxes will be s-1.
+
+In the example above, the problem size for (B1:1,B2:2,R:2) is 3.  All boxes should be moved to room3.
+
+Please Note, the problem size is returned by reference by function set<string> GraphPlan::nextTask(unsigned& problem_size);
+where nextTask() returns a set of initial states in string format
+
+Also, note that each task has each box or robot being mentioned only in one of the state literals
+For example : any object will only occur once in the whole state list
+For example : B1:1,B2:2,R:2,R:1 is not valid as R cannot be in 1 and 2 both
+==========================================================================================================================================
+
+
+State description : 
+Each state can be described with a string 
+For example : B1:1,B2:2,R:2 will be written as a set of 3 states : {B1:1:1}, { B2:2:1}, {R:2:1}
+with this format: {object_name:room_number:present_bool}
+if we want to say ~In(B1,1) we can write it as "B1:1:0"
+These states can be made with the help of makeStates(string, unsigned, bool) where each parameter 
+corresponds to each term in the format
+Please take a look at util.h for details for this function
+==========================================================================================================================================
+
+Action decsription:
+An action has pre_conds and effects which are both sets of strings
+Also, an Action can be recognized by its name which is unique at a level
+For Example : if all the pre_conds of PushThrough(B2, 1 ,2) are met then we can make an 
+object of this Action where name  = PushThrough(B2,1,2) and pre_conds & effects are the string sets
+
+All operator overloading on Actions works on the basis of name only since its unique at each level
+===========================================================================================================================================
+
+Level description : 
+Each Level data structures stores actions performed at that level and map<string, set<Action>>
+where the key is the effect of one of the actions and the value is the set of actions that have
+this effect as one of the effects
+This helps in backtracking and calculating action_mutexes and state_mutexes
+===========================================================================================================================================
+
+Structure of Framework : 
+util.h -> all function and dat structures declarations
+util.cpp -> implemetation of functions from util.h which are not from class ExtractSolution
+ExtractSolution.cpp -> contains the implematation of class Extractsolution 
+compile.sh : small shell script to compile the code.
+graphplan.cpp : implement ur graphPlan algorithm in this file
+===================================================================================================================================
+
+ImporTant Points : 
+
+*You have been provided with graphplan.cpp with the basic backbone.
+graphPlan() function is the one that creates actions, mutexes and also calls ExtractSolution API.
+compile commands are being given in compile.sh
+
+*Also, note that if it takes more than like 4-5 min to get the path from ExtractSolution, then it returns failure and switches its time_out flag to TRUE.
+
+*The algorithm details for ExtractSolution are given in ExtractSolution.cpp
+
+*Also, note that we don't make use of no_goods in ExtractSolution to keep it simple.
+
+*In order to stop the expansion of planning graph, you may rely upon the condition that the two levels have same literals and same mutexes.
+=============================================================================================================================================
